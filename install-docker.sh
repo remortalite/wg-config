@@ -1,4 +1,4 @@
-dpkg --configure -a # fix packages if something wrong
+# sudo dpkg --configure -a # fix packages if something wrong
 
 sudo groupadd docker
 sudo usermod -aG docker $USER
