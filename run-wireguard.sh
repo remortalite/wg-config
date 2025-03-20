@@ -16,6 +16,7 @@ echo "WG_HOST=$1" > .env
 WG_PASS=$(openssl rand -base64 24)
 
 echo "PASSWORD=$WG_PASS" >> .env
+docker run --rm -it ghcr.io/wg-easy/wg-easy wgpw ''$WG_PASS'' >> .env
 
 docker compose build
 
